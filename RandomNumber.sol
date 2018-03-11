@@ -3,6 +3,7 @@ pragma solidity ^0.4.19;
 
 import "./zombiehelper.sol";
 
+// this is a simple but vulnerable solution
 contract randomNumber {
 
 uint randNonce = 0;
