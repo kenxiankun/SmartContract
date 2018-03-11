@@ -8,9 +8,9 @@ contract randomNumber {
 
 uint randNonce = 0;
 
-function generate() returns (uint)
+function generate(uint _modulus) internal returns (uint)
 {
-  uint random = uint(keccak256(now, msg.sender, randNonce)) % 100;
+  uint random = uint(keccak256(now, msg.sender, randNonce)) % _modulus;
   randNonce++;
   return random;
 }
